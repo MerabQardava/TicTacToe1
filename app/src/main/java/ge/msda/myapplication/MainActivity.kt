@@ -206,7 +206,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         if (secondPlayer.contains(1) && secondPlayer.contains(5) && secondPlayer.contains(9)) {
             winnerPlayer = 2
         }
-        if (svla == 9) {
+        if ((svla == 9) and (winnerPlayer!=2)and(winnerPlayer!=1) ) {
             winnerPlayer = 3
         }
 
@@ -217,7 +217,7 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
                 Toast.makeText(this, "X wins!", Toast.LENGTH_LONG).show()
             }; if (winnerPlayer == 2) {
                 Toast.makeText(this, "0 wins!", Toast.LENGTH_LONG).show()
-            } else {
+            };if(winnerPlayer == 3) {
                 Toast.makeText(this, "It's a tie", Toast.LENGTH_LONG).show()
             }
             disableButtons()
